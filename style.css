@@ -1,34 +1,146 @@
 .container {
-    display: flex;
-    align-content: center;
-    text-align: center;
+  display: flex;
+  align-content: center;
+  text-align: center;
 }
 .container > div {
-    flex: 1; /*grow*/
-    display: inline-block;
-    padding: 1em;
-    border: 2px solid blue;
-    padding: 0px;
-    margin: 0px;
+  display: inline-block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: 1px solid black;
+  margin: auto;
+  width: 305px;
+  align-content: center;
+  text-align: center;
 }
 
 html {
-    font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 footer {
-    text-align: center;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  color: white;
+  background-color: black;
 }
 
-h1 {
-    text-align: center;
+#forecast {
+  border-style: solid;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 19%;
+  text-align: center;
+  border-width: 2px;
+  border-radius: 3px;
+  padding: auto;
+  float: left;
 }
-
+#place {
+  text-align: center;
+  text-align: center;
+  clear: both;
+}
 #main_layout {
-    align-content: center;
+  align-content: center;
 }
 
 .weather_icons {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.search {
+  padding-top: 25px;
+  margin: auto;
+  text-align: center;
+}
+
+#search-input {
+  width: 400px;
+  height: 35px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+#btn {
+  height: 35px;
+  width: 100px;
+  color: black;
+  background: white;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+}
+
+#btn:hover {
+  cursor: pointer;
+}
+
+.low-high {
+  text-align: center;
+}
+
+.search-results {
+  height: 45px;
+  width: 60%;
+  background: white;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  color: black;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  /* justify-content: center; */
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.search-results:hover {
+  cursor: pointer;
+}
+
+body {
+  margin-bottom: 50px;
+}
+
+#temp-conversion {
+  float: right;
+  width: 80%;
+  margin-left: auto;
+  text-align: right;
+  height: 105px;
+}
+
+#f-btn {
+  margin-right: 50px;
+}
+
+#c-btn {
+  margin-top: 50px;
+}
+
+.in-use {
+  color: white;
+  background-color: black;
+}
+
+.not-in-use {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+
+.not-in-use:hover {
+  cursor: pointer;
+}
+
+.conversion {
+  width: 75px;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: thin;
 }

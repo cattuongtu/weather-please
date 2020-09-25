@@ -1,77 +1,123 @@
 <html>
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto&display=swap" rel="stylesheet">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="utf-8" />
-    </head>
-<link rel="stylesheet" type="text/css" href="style.css">
-<title>Weather Display</title>
-    
-    <div id="main_layout_1"> 
-        <h1>Weather Forecast</h1>
-        <h1 id="place"></h1>
-        <div class= "container"> <!-- Container for daily weather displays -->
-            
-            <div class="weather_icons">
-                <h2 id="day0"></h2>
-                <h2 class="temperature" id="temp0"></h2>
-                <img src="" id="icon0"/>
-                <h2>Low</h2>
-                <h2 class="temperature" id="temp6"></h2>
-            </div>
-            
-            <div class="weather_icons">
-                <h2 id="day1"></h2>
-                <h2 class="temperature" id="temp1"></h2>
-                <img src="" id="icon1"/>
-                <h2>Low</h2>
-                <h2 class="temperature" id="temp7"></h2>
-            </div>
-            
-            <div class="weather_icons">
-                <h2 class="temperature" id="day2"></h2>
-                <h2 id="temp2"></h2>
-                <img src="" id="icon2"/>
-                <h2>Low</h2>
-                <h2 class="temperature" id="temp8"></h2>
-            </div>
-            
-            <div class="weather_icons">
-                <h2 class="temperature" id="day3"></h2>
-                <h2 id="temp3"></h2>
-                <img src="" id="icon3"/>
-                <h2>Low</h2>
-                <h2 class="temperature" id="temp9"></h2>
-            </div>
-            
-            <div class="weather_icons">
-                <h2 id="day4"></h2>
-                <h2 class="temperature" id="temp4"></h2>
-                <img src="" id="icon4"/>
-                <h2>Low</h2>
-                <h2 id="temp10"></h2>
-            </div>
-            
-            <div class="weather_icons">
-                <h2 id="day5"></h2>
-                <h2 class="temperature" id="temp5"></h2>
-                <img src="" id="icon5"/>
-                <h2>Low</h2>
-                <h2 class="temperature" id="temp11"></h2>
-            </div>
-            
-        </div> 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Weather Forecast</title>
+  </head>
 
+  <body>
+    <div id="main_layout_1">
+      <h1 id="forecast">Weather Forecast</h1>
+      <div id="temp-conversion">
+        <button class="conversion not-in-use" id="c-btn"><h2>C°</h2></button>
+        <button class="conversion in-use" id="f-btn"><h2>F°</h2></button>
+      </div>
+      <h1 id="place"></h1>
+      <div class="container">
+        <!-- Container for daily weather displays -->
 
-        <footer>
-            <input id="search-input" type="text" placeholder="enter location">
-            <button id="btn" type="submit">Submit</button>
-            <h3>Cat-Tuong Tu 2020</h3>
-        </footer>
-
-        <div id="locations">
-            <h2>Search Results:</h2>
+        <div class="weather_icons">
+          <h2 id="day0"></h2>
+          <h2 class="temperature" id="curr0"></h2>
+          <img src="" id="icon0" />
+          <div class="low-high">
+            <h2>
+              Low:&nbsp;
+              <span class="temperature" id="temp6"></span>
+              <span>&nbsp;&nbsp;High:&nbsp;</span>
+              <span class="temperature" id="temp0"></span>
+            </h2>
+          </div>
         </div>
 
+        <div class="weather_icons">
+          <h2 id="day1"></h2>
+          <h2 class="temperature" id="curr1"></h2>
+          <img src="" id="icon1" />
+          <div class="low-high">
+            <h2>
+              Low:&nbsp;
+              <span class="temperature" id="temp7"></span>
+              <span>&nbsp;&nbsp;High:&nbsp;</span>
+              <span class="temperature" id="temp1"></span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="weather_icons">
+          <h2 class="temperature" id="day2"></h2>
+          <h2 class="temperature" id="curr2"></h2>
+          <img src="" id="icon2" />
+          <div class="low-high">
+            <h2>
+              Low:&nbsp;
+              <span class="temperature" id="temp8"></span>
+              <span>&nbsp;&nbsp;High:&nbsp;</span>
+              <span class="temperature" id="temp2"></span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="weather_icons">
+          <h2 class="temperature" id="day3"></h2>
+          <h2 class="temperature" id="curr3"></h2>
+          <img src="" id="icon3" />
+          <div class="low-high">
+            <h2>
+              Low:&nbsp;
+              <span class="temperature" id="temp9"></span>
+              <span>&nbsp;&nbsp;High:&nbsp;</span>
+              <span class="temperature" id="temp3"></span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="weather_icons">
+          <h2 id="day4"></h2>
+          <h2 class="temperature" id="curr4"></h2>
+          <img src="" id="icon4" />
+          <div class="low-high">
+            <h2>
+              Low:&nbsp;
+              <span class="temperature" id="temp10"></span>
+              <span>&nbsp;&nbsp;High:&nbsp;</span>
+              <span class="temperature" id="temp4"></span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="weather_icons">
+          <h2 id="day5"></h2>
+          <h2 class="temperature" id="curr5"></h2>
+          <img src="" id="icon5" />
+          <div class="low-high">
+            <h2>
+              Low:&nbsp;
+              <span class="temperature" id="temp11"></span>
+              <span>&nbsp;&nbsp;High:&nbsp;</span>
+              <span class="temperature" id="temp5"></span>
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="search">
+        <input id="search-input" type="text" placeholder="enter location" />
+        <button id="btn" type="submit">Submit</button>
+      </div>
+
+      <div id="locations">
+        <h2>Search Results:</h2>
+      </div>
     </div>
+
+    <footer>
+      <p>Cat-Tuong Tu 2020</p>
+    </footer>
     <script src="script.js"></script>
+  </body>
 </html>
